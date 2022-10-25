@@ -1,0 +1,20 @@
+Jaeger starting command with docker
+
+sudo docker run -d --name jaeger --network="host" \
+  -v /home/neoito/projects/Accounting/appblox-deployments/open-telemetry/jaeger-postgresql:/mnt/mydata1 \
+  -e COLLECTOR_OTLP_ENABLED=false \
+  -e COLLECTOR_HTTP_ENABLED=false \
+  -e ENV:DB_PASSWORD=postgres \
+  -e SPAN_STORAGE_TYPE=grpc-plugin \
+  -e GRPC_STORAGE_PLUGIN_BINARY=/mnt/mydata1/jaeger-pg-store \
+  -e GRPC_STORAGE_PLUGIN_CONFIGURATION_FILE=/mnt/mydata1/config-example.yaml \
+  -p 5775:5775/udp \
+  -p 6831:6831/udp \
+  -p 6832:6832/udp \
+  -p 5778:5778 \
+  -p 16686:16686 \
+  -p 14250:14250 \
+  -p 14268:14268 \
+  -p 14269:14269 \
+  -p 9411:9411 \
+  jaegertracing/all-in-one:1.38
