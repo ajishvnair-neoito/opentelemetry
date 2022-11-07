@@ -11,8 +11,6 @@ exporters:
   #   region: us
   logging:
     loglevel: debug
-  file:
-    path: /home/ubuntu/opentelemetry-logs.json
   jaeger: 
     endpoint: localhost:14250
     tls:
@@ -34,4 +32,4 @@ service:
     traces:
       receivers: [otlp]
       processors: [batch]
-      exporters: [logging,file,jaeger]
+      exporters: [logging,jaeger]
