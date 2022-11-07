@@ -12,7 +12,7 @@ exporters:
   logging:
     loglevel: debug
   file:
-    path: /home/neoito/projects/Accounting/appblox-deployments/open-telemetry/filename.json
+    path: /home/neoito/projects/Accounting/appblox-deployments/open-telemetry/logs.json
   jaeger: 
     endpoint: localhost:14250
     tls:
