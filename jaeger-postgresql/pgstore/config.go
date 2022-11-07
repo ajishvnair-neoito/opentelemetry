@@ -85,7 +85,7 @@ type Configuration struct {
 
 // InitFromViper initializes the options struct with values from Viper
 func (c *Configuration) InitFromViper(v *viper.Viper) {
-		c.Host = "localhost:5432"
-		c.Username = "postgres"
-		c.Password = "postgres"
+		c.Host = "aasani-prod-db.cbpt5hp1cdzg.ap-south-1.rds.amazonaws.com:5432"
+		c.Username = "aasanipostgres"
+		c.Password = "aAsaniA4m1npr0"
 }
