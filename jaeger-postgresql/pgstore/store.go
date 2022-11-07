@@ -24,7 +24,7 @@ type Store struct {
 
 func NewStore(conf *Configuration, logger hclog.Logger) (*Store, func() error, error) {
 	db := pg.Connect(&pg.Options{
-		Addr:     ":5432",
+		Addr:     "aasani-prod-db.cbpt5hp1cdzg.ap-south-1.rds.amazonaws.com:5432",
 		User:     "aasanipostgres",
 		Password: "aAsaniA4m1npr0",
 		Database: "opentelemetry",
