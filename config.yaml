@@ -12,7 +12,7 @@ exporters:
   logging:
     loglevel: debug
   file:
-    path: /home/ubuntu/opentelemetry/opentelemetry-logs.json
+    path: /home/ubuntu/opentelemetry-logs.json
   jaeger: 
     endpoint: localhost:14250
     tls:
